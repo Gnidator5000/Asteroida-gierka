@@ -104,6 +104,7 @@ public class PlayerController : MonoBehaviour
             //popchnij asteroide
             asteroid.GetComponent<Rigidbody>().AddForce(shieldForce * 5, ForceMode.Impulse);
             shieldCapacity -= 0.25f;
+            Camera.main.transform.Find("Hit").GetComponent<AudioSource>().Play();
             if(shieldCapacity <= 0)
             {
                 //poinformuj level manager, że gra się skończyła bo nie mamy osłon
