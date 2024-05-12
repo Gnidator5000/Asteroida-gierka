@@ -21,6 +21,15 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene("Level1");
     }
+    //ta funkcja powoduje dzialajacy przycisk po porazce
+    public void RestartGame()
+    {
+            
+    //pobiera akutalny poziom 
+    Scene scene = SceneManager.GetActiveScene();
+    //uruchamia poziom odczytany linijke wyzej
+    SceneManager.LoadScene(scene.name);
+    }
     public void QuitGame()
     {
         Application.Quit();

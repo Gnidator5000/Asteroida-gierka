@@ -2,8 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class LevelManager : MonoBehaviour
 {
+    
     Transform player;
     //odleg³oœc od koñca poziomu
     public float levelExitDistance = 100;
@@ -61,6 +63,6 @@ public class LevelManager : MonoBehaviour
         Camera.main.transform.Find("AmbientMusic").GetComponent<AudioSource>().Stop();
         //odgrywmay dzwiek przegranej
         Camera.main.transform.Find("GameOverSound").GetComponent<AudioSource>().Play();
-        //przenisione do elementu interfejsu
+
     }
-}
+}  
