@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,4 +35,21 @@ public class GameManager : MonoBehaviour
     {
         Application.Quit();
     }
+
+    //ta funkcja powoduje dzialajacy przycisk nastepnego poziomu
+    public void GoToNextLevel()
+    {
+
+        //pobiera aktualny poziom
+        Scene scene = SceneManager.GetActiveScene();
+        //usuwa text Level z aktualnej sceny pozostawiajac tylko numer poziomu + zmiana na liczbe 
+        int levelNo = int.Parse(scene.name.Replace("Level", ""));
+        //uruchomienie nastepnego poziomu czyli dodanie 1 do wczesniej odczytanej liczby
+
+    if(levelNo == 5 )
+    {
+        SceneManager.LoadScene("End");
+    } else {
+         SceneManager.LoadScene("Level" + (levelNo + 1).ToString());
+    }}
 }
