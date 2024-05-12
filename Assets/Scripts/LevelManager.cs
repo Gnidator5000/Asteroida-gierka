@@ -38,7 +38,7 @@ public class LevelManager : MonoBehaviour
     {
         
     }
-    //funkcja jest utuchamiana kiedy dany poziom (level) jest zakoñczony sukcesem
+    //funkcja jest uruchamiana kiedy dany poziom (level) jest zakoñczony sukcesem 
     public void OnSuccess()
     {
         //zatrzymaj fizykê gry
