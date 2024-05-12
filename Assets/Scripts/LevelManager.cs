@@ -45,6 +45,8 @@ public class LevelManager : MonoBehaviour
         Time.timeScale = 0f;
         //ustaw flagê - poziom zakoñczony
         levelComplete = true;
+        //zatrzymaj ambientowa muzyczke
+        Camera.main.transform.GetComponent<AudioSource>().Stop();
         //odegraj dŸwiêk koñca poziomu
         Camera.main.transform.Find("LevelCompleteSound").GetComponent<AudioSource>().Play();
     }
@@ -54,6 +56,8 @@ public class LevelManager : MonoBehaviour
         Time.timeScale = 0f;
         //ustaw flagê, ¿e nie uda³o siê ukoñczyæ poziomu
         levelFailed = true;
+        //zatrzymaj ambientowa muzyczke
+        Camera.main.transform.GetComponent<AudioSource>().Stop();
         //odgrywmay dzwiek przegranej
         Camera.main.transform.Find("GameOverSound").GetComponent<AudioSource>().Play();
     }

@@ -114,7 +114,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        //jeżeli dotkniemy znacnzika końca poziomu to ustaw w levelmanager flagę,
+        //jeżeli dotkniemy znacznika końca poziomu to ustaw w levelmanager flagę,
         //że poziom jest ukończony
         if (other.transform.CompareTag("LevelExit"))
         {
